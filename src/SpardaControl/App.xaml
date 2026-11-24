@@ -1,0 +1,22 @@
+﻿<Application x:Class="SpardaControl.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:infra="clr-namespace:SpardaControl.Infrastructure"
+             ShutdownMode="OnMainWindowClose">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <infra:BoolToVisibilityConverter x:Key="BoolToVis"/>
+            <infra:BoolToVisibilityConverter x:Key="InvBoolToVis" Invert="True"/>
+            <infra:IntEqualsConverter x:Key="IntEq"/>
+            <infra:ColorToBrushConverter x:Key="ColorToBrush"/>
+            <infra:NullToVisibilityConverter x:Key="NullToVis"/>
+            <infra:BatteryWidthConverter x:Key="BatteryWidth"/>
+            <infra:BatteryBrushConverter x:Key="BatteryBrush"/>
+            <infra:InverseBoolConverter x:Key="InvBool"/>
+            <infra:PlusOneConverter x:Key="PlusOne"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

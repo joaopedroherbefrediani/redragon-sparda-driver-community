@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SpardaControl.Core/SpardaControl.Core.csproj" />
+    <Project Path="src/SpardaControl/SpardaControl.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/SpardaProbe/SpardaProbe.csproj" />
+  </Folder>
+</Solution>

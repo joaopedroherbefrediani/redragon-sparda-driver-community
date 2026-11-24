@@ -1,0 +1,68 @@
+<UserControl x:Class="SpardaControl.Views.LightingPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="18"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Style="{StaticResource Card}" VerticalAlignment="Top">
+            <StackPanel>
+                <TextBlock Text="Efeito" Style="{StaticResource H2}"/>
+                <TextBlock Style="{StaticResource Caption}" Margin="0,4,0,14" Text="Escolha o efeito de luz do mouse."/>
+                <ListBox Style="{StaticResource SegmentList}" ItemsSource="{Binding LightModeOptions}" SelectedValue="{Binding LightMode}"/>
+                <Grid Margin="0,16,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="34"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Cor" Style="{StaticResource Label}"/>
+                    <Border Grid.Column="1" Width="120" Height="28" CornerRadius="8" HorizontalAlignment="Left" Cursor="Hand" BorderBrush="#50FFFFFF" BorderThickness="1"
+                            Background="{Binding LightColor, Converter={StaticResource ColorToBrush}}" MouseLeftButtonUp="Color_Click"
+                            IsEnabled="{Binding LightColorEnabled}" ToolTip="Escolher cor">
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Style.Triggers>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter Property="Opacity" Value="0.3"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                    <TextBlock Grid.Row="1" Text="Brilho" Style="{StaticResource Label}"/>
+                    <Slider Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="9" IsSnapToTickEnabled="True" TickFrequency="1" VerticalAlignment="Center"
+                            Value="{Binding LightBrightness}" IsEnabled="{Binding LightBrightnessEnabled}"/>
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding LightBrightness}" HorizontalAlignment="Right" Style="{StaticResource Label}"/>
+                    <TextBlock Grid.Row="2" Text="Velocidade" Style="{StaticResource Label}"/>
+                    <Slider Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="9" IsSnapToTickEnabled="True" TickFrequency="1" VerticalAlignment="Center"
+                            Value="{Binding LightSpeed}" IsEnabled="{Binding LightSpeedEnabled}"/>
+                    <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding LightSpeed}" HorizontalAlignment="Right" Style="{StaticResource Label}"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="2" Style="{StaticResource Card}" VerticalAlignment="Top">
+            <StackPanel>
+                <TextBlock Text="Economia de energia" Style="{StaticResource H2}"/>
+                <CheckBox Style="{StaticResource Switch}" IsChecked="{Binding MovingOffLight}" Margin="0,16,0,12">
+                    <StackPanel>
+                        <TextBlock Text="Apagar a luz enquanto o mouse se move" FontSize="13"/>
+                        <TextBlock Text="Economiza bateria durante o uso." Style="{StaticResource Caption}"/>
+                    </StackPanel>
+                </CheckBox>
+                <Grid>
+                    <TextBlock Text="Apagar após ficar parado" Style="{StaticResource Label}"/>
+                    <ComboBox Width="150" HorizontalAlignment="Right" ItemsSource="{Binding SleepOptions}" DisplayMemberPath="Label"
+                              SelectedValuePath="Value" SelectedValue="{Binding SleepTime}"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

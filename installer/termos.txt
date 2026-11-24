@@ -1,0 +1,23 @@
+﻿TERMO DE USO - SPARDA CONTROL
+
+Leia com atenção antes de continuar a instalação.
+
+1. SOFTWARE NÃO OFICIAL
+O Sparda Control NÃO é um software oficial da Redragon. Ele não foi desenvolvido, aprovado, patrocinado nem é mantido pela Redragon ou por qualquer empresa ligada à marca.
+
+2. QUEM CRIOU
+Este programa foi criado de forma independente por um usuário da marca Redragon, com o objetivo de facilitar e melhorar a experiência de uso do mouse Redragon Sparda. Ele permite configurar o mouse direto no computador, sem precisar de internet ou do navegador.
+
+3. MARCAS
+"Redragon", o logotipo da Redragon e os nomes de produtos são marcas de seus respectivos proprietários e aparecem aqui apenas para identificar o dispositivo compatível.
+
+4. COMO FUNCIONA
+O Sparda Control grava as configurações (botões, DPI, sensor, macros e demais ajustes) diretamente na memória do mouse, da mesma forma que o configurador web da marca. A qualquer momento é possível voltar às configurações de fábrica pela opção "Restaurar fábrica".
+
+5. SEM GARANTIA
+Este software é fornecido "como está", sem garantias de qualquer tipo. O uso é de responsabilidade de quem o instala. O autor não se responsabiliza por eventuais danos, perda de configurações ou mau funcionamento decorrentes do uso do programa.
+
+6. PRIVACIDADE
+O Sparda Control funciona totalmente offline. Nenhum dado é coletado ou enviado pela internet.
+
+Ao selecionar "Eu aceito o acordo" e continuar, você declara que leu e concorda com este termo.

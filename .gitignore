@@ -1,0 +1,9 @@
+bin/
+obj/
+publish/
+dist/
+.vs/
+*.user
+*.suo
+installer/wizard-large.bmp
+installer/wizard-small.bmp
